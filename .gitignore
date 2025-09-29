@@ -1,5 +1,6 @@
 /.vs
 /int
 /out
+/packages
 
 *.vcxproj.user
