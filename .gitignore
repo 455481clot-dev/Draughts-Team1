@@ -1,6 +1,9 @@
 /.vs
 /int
 /out
+/GTests/int
+/GTests/out
 /packages
 
 *.vcxproj.user
+
