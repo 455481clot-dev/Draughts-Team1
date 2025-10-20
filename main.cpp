@@ -12,6 +12,19 @@ std::vector<char> board{
 	'o','.','o','.','o','.','o','.',
 };
 
+struct Coords {
+	int x;
+	int y;
+};
+
+Coords indexToCoords(int index) {
+	return { index % 8, index / 8 };
+}
+
+int coordsToIndex(Coords coords) {
+	return coords.x + coords.y * 8;
+}
+
 void printBoard() {
 	for (int i = 0; i < board.size(); ++i) {
 		if (i % 8 == 0)
@@ -29,7 +42,7 @@ void movePawn(int from, int to) {
 
 int main() {
 	printBoard();
-	movePawn(40, 33);
+	movePawn(coordsToIndex({ 0,5 }), coordsToIndex({ 1,4 }));
 
 	printBoard();
 	movePawn(40, 33);
