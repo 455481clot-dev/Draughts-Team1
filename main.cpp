@@ -45,7 +45,11 @@ int main() {
 	movePawn(coordsToIndex({ 0,5 }), coordsToIndex({ 1,4 }));
 
 	printBoard();
-	movePawn(40, 33);
+	movePawn(coordsToIndex({ 3,2 }), coordsToIndex({ 2,3 }));
+	
+	printBoard();
+	movePawn(coordsToIndex({ 1,4 }), coordsToIndex({ 2,3 }));
+	movePawn(coordsToIndex({ 2,3 }), coordsToIndex({ 3,2 }));
 
 	printBoard();
 }
