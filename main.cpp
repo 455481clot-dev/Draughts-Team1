@@ -12,6 +12,7 @@ std::vector<char> board{
 	'o','.','o','.','o','.','o','.',
 };
 
+char currentPlayer;
 char player1 = 'x';
 char player2 = 'o';
 
@@ -45,12 +46,15 @@ void movePawn(int from, int to) {
 
 int main() {
 	printBoard();
+	currentPlayer = player2;
 	movePawn(coordsToIndex({ 0,5 }), coordsToIndex({ 1,4 }));
 
 	printBoard();
+	currentPlayer = player1;
 	movePawn(coordsToIndex({ 3,2 }), coordsToIndex({ 2,3 }));
 	
 	printBoard();
+	currentPlayer = player2;
 	movePawn(coordsToIndex({ 1,4 }), coordsToIndex({ 2,3 }));
 	movePawn(coordsToIndex({ 2,3 }), coordsToIndex({ 3,2 }));
 
