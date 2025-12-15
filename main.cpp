@@ -68,24 +68,32 @@ void capture(int from, int jump, int to) {
 	movePawn(jump, to);
 }
 
+void switchPlayer(char player) {
+	if (currentPlayer == player)
+		std::cout << "ERROR: Current player is already " << player << std::endl;
+	
+	currentPlayer = player;
+}
+
 int main() {
 	printBoard();
-	currentPlayer = player2;
+
+	switchPlayer(player2);
 	movePawn(coordsToIndex({ 0,5 }), coordsToIndex({ 1,4 }));
 	checkWinCondition();
-
 	printBoard();
-	currentPlayer = player1;
+
+	switchPlayer(player1);
 	movePawn(coordsToIndex({ 3,2 }), coordsToIndex({ 2,3 }));
 	checkWinCondition();
-
 	printBoard();
-	currentPlayer = player2;
+
+	switchPlayer(player2);
 	capture(
 		coordsToIndex({ 1,4 }),
 		coordsToIndex({ 2,3 }),
 		coordsToIndex({ 3,2 }));
 	checkWinCondition();
-
 	printBoard();
+
 }
