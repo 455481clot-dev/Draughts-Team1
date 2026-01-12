@@ -12,6 +12,8 @@ std::vector<char> board{
 	'o','.','o','.','o','.','o','.',
 };
 
+// Leonardo Test 
+
 char currentPlayer;
 char player1 = 'x';
 char player2 = 'o';
